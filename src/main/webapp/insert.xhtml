@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		crossorigin="anonymous" />
+	<style>
+		body {
+			background-color: #f8f9fa;
+			color: #495057;
+			font-family: 'Arial', sans-serif;
+		}
+		
+		h1 {
+			color: #007bff;
+			text-align: center;
+			padding: 20px; /* Add padding for space around the heading */
+			background-color: #f0f8ff; /* Choose your background color */
+			border-radius: 5px; /* Add border radius for rounded corners */
+		}
+		
+		label {
+			font-weight: bold;
+		}
+		
+		.form-group {
+			margin-bottom: 15px;
+		}
+		
+		.form-control {
+			border: 1px solid #ced4da;
+			border-radius: 0.25rem;
+		}
+		
+		.btn-primary {
+			background-color: #007bff;
+			border-color: #007bff;
+		}
+		
+		.btn-primary:hover {
+			background-color: #0056b3;
+			border-color: #0056b3;
+		}
+	</style>
+</h:head>
+
+<h:body class="container-fluid">
+
+	<div class="container">
+		<div class="custom-form">
+			<h:form>
+				<h1>Add Client Record</h1>
+				<div class="form-group">
+
+					<label for="e_id" class="form-label">Client Id</label>
+					<h:inputText id="e_id" class="form-control" value="#{emp.id}">
+					</h:inputText>
+
+				</div>
+
+				<div class="form-group">
+
+					<label for="e_name" class="form-label">Client Name</label>
+					<h:inputText id="e_name" class="form-control" value="#{emp.name}">
+					</h:inputText>
+
+				</div>
+
+				<div class="form-group">
+
+					<label for="e_con" class="form-label">Client Contact</label>
+					<h:inputText id="e_con" class="form-control" value="#{emp.contact}">
+					</h:inputText>
+
+				</div>
+
+				<div class="form-group">
+
+					<label for="e_itemshipped" class="form-label">Item Shipped</label>
+					<h:inputText id="e_itemshipped" class="form-control"
+						value="#{emp.itemshipped}">
+					</h:inputText>
+
+				</div>
+
+				<div class="form-group">
+
+					<label for="e_datereceived" class="form-label">Date
+						Received</label>
+					<h:inputText id="e_datereceived" class="form-control"
+						value="#{emp.datereceived}">
+					</h:inputText>
+
+				</div>
+
+				<div class="form-group">
+
+					<label for="e_dateshipped" class="form-label">Date Shipped</label>
+					<h:inputText id="e_dateshipped" class="form-control"
+						value="#{emp.dateshipped}">
+					</h:inputText>
+
+				</div>
+
+				<div>
+					<h:commandButton class="btn btn-primary"
+						action="#{ctlr.insert(emp)}" value="Add Record"></h:commandButton>
+				</div>
+
+
+
+			</h:form>
+
+
+		</div>
+	</div>
+
+</h:body>
+
+
+</html>
